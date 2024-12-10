@@ -18,7 +18,7 @@ export default function Footer() {
         <li className={styles.soc_item}>
           <a
             className={styles.soc_link}
-            href="www.linkedin.com/in/pavlenko-vladislav"
+            href="https://www.linkedin.com/in/pavlenko-vladislav/"
             target="_blank"
           >
             <svg className={styles.soc_icon} width={24} height={24}>
