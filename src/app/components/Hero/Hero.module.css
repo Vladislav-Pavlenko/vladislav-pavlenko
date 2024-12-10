@@ -1,6 +1,7 @@
 .section {
   padding: 97px 27px;
 }
+
 .welcome {
   color: #e5e9f0;
   font-size: clamp(12px, (18/375) * 100vw, 36px);
@@ -20,4 +21,20 @@
   color: #43d9ad;
   font-size: clamp(14px, (20/375) * 100vw, 36px);
   font-weight: 450;
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    padding: 150px 0 21px 100px;
+  }
+  .welcome {
+    font-size: clamp(12px, (18/1440) * 100vw, 36px);
+  }
+  .title {
+    font-size: clamp(16px, (62/1440) * 100vw, 72px);
+  }
+  .position {
+    color: #4d5bce;
+    font-size: clamp(14px, (32/1440) * 100vw, 36px);
+  }
 }

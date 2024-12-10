@@ -5,16 +5,23 @@ import Hero from "./components/Hero/Hero";
 import FindMe from "./components/FindMe/FindMe";
 import { useState } from "react";
 import ModalMenu from "./components/ModalMenu/ModalMenu";
+import Footer from "./components/Footer/Footer";
+import Slider from "./components/Slider/Slider";
 export default function Hello() {
   const [visible, setVisible] = useState(false);
-
   return (
     <div className={styles.container}>
       <Header setVisible={setVisible} />
-      <main>
-        <Hero />
-        <FindMe />
+      <main className={styles.main}>
+        <div className={styles.info_container}>
+          <Hero />
+          <FindMe />
+        </div>
+        <Slider />
       </main>
+      <div className={styles.footer_container}>
+        <Footer />
+      </div>
       <ModalMenu setVisible={setVisible} visible={visible} />
     </div>
   );

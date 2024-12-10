@@ -2,8 +2,39 @@
   border-radius: 8px;
   border: 1px solid #1e2d3d;
   background: #011627;
-  background-image: url("/images/home-blur.png");
+  background-image: url("/images/home-blur-mob.png");
   background-position: center;
   background-size: cover;
   position: relative;
+  width: 100%;
+}
+
+.footer_container {
+  display: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    background-image: url("/images/home-blur-pc.png");
+    background-position: 120% 20%;
+    background-size: 55vw;
+    background-repeat: no-repeat;
+  }
+
+  .main {
+    flex-direction: row;
+  }
+
+  .info_container {
+    max-width: 660px;
+  }
+
+  .footer_container {
+    display: block;
+  }
 }
