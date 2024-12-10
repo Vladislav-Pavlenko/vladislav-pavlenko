@@ -1,0 +1,9 @@
+.container {
+  border-radius: 8px;
+  border: 1px solid #1e2d3d;
+  background: #011627;
+  background-image: url("/images/home-blur.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}

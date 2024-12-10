@@ -1,0 +1,30 @@
+.section {
+  padding: 97px 27px 85px;
+}
+
+.comment {
+  color: #607b96;
+  font-size: clamp(12px, (14/375) * 100vw, 36px);
+  font-weight: 450;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  word-break: break-all;
+}
+
+.const {
+  color: #4d5bce;
+}
+
+.name {
+  color: #43d9ad;
+}
+
+.githubLink {
+  color: #e99287;
+}

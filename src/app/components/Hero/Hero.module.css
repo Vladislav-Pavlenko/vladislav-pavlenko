@@ -1,0 +1,23 @@
+.section {
+  padding: 97px 27px;
+}
+.welcome {
+  color: #e5e9f0;
+  font-size: clamp(12px, (18/375) * 100vw, 36px);
+  font-weight: 450;
+  margin-bottom: 10px;
+}
+
+.title {
+  color: #e5e9f0;
+  font-size: clamp(16px, (54/375) * 100vw, 72px);
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.position {
+  color: #43d9ad;
+  font-size: clamp(14px, (20/375) * 100vw, 36px);
+  font-weight: 450;
+}
