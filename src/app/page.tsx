@@ -17,7 +17,9 @@ export default function Hello() {
           <Hero />
           <FindMe />
         </div>
-        <Slider />
+        <div className={styles.slider_container}>
+          <Slider />
+        </div>
       </main>
       <div className={styles.footer_container}>
         <Footer />
