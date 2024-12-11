@@ -16,6 +16,12 @@ body {
   font-weight: 450;
 }
 
+@media screen and (min-width: 765px) {
+  body {
+    padding: calc((15 / 765) * 100vw);
+  }
+}
+
 @media screen and (min-width: 1440px) {
   body {
     padding: calc((52 / 1440) * 100vw);

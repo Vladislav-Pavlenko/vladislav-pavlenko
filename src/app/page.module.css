@@ -17,10 +17,12 @@
   display: flex;
   flex-direction: column;
 }
+
 .slider_container {
   display: none;
 }
-@media screen and (min-width: 1440px) {
+
+@media screen and (min-width: 1024px) {
   .container {
     background-image: url("/images/home-blur-pc.png");
     background-position: 120% 20%;
@@ -37,10 +39,16 @@
   }
 
   .info_container {
-    max-width: 660px;
+    max-width: 600px;
   }
 
   .footer_container {
     display: block;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .info_container {
+    max-width: 660px;
   }
 }

@@ -28,7 +28,6 @@
 
 .logo {
   color: #607b96;
-  font-size: 16px;
   font-size: clamp(12px, (16/375) * 100vw, 36px);
   font-weight: 450;
 }
@@ -62,4 +61,18 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+@media screen and (min-width: 765px) {
+  .modal {
+    width: 96vw;
+  }
+
+  .logo {
+    font-size: clamp(12px, (16/765) * 100vw, 36px);
+  }
+
+  .page {
+    font-size: clamp(12px, (16/765) * 100vw, 36px);
+  }
 }

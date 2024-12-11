@@ -1,0 +1,9 @@
+.swiper {
+  height: 663px;
+}
+
+@media screen and (min-width: 1440px) {
+  .swiper {
+    height: 623px;
+  }
+}

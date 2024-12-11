@@ -23,10 +23,38 @@
   font-weight: 450;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 765px) {
+  .section {
+    padding: 90px 27px;
+  }
+  .welcome {
+    font-size: clamp(12px, (18/765) * 100vw, 36px);
+  }
+  .title {
+    font-size: clamp(16px, (54/765) * 100vw, 72px);
+  }
+  .position {
+    font-size: clamp(14px, (20/765) * 100vw, 36px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .section {
     padding: 150px 0 21px 100px;
   }
+  .welcome {
+    font-size: clamp(12px, (18/765) * 100vw, 36px);
+  }
+  .title {
+    font-size: clamp(16px, (62/765) * 100vw, 72px);
+  }
+  .position {
+    color: #4d5bce;
+    font-size: clamp(14px, (32/765) * 100vw, 36px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
   .welcome {
     font-size: clamp(12px, (18/1440) * 100vw, 36px);
   }
@@ -34,7 +62,6 @@
     font-size: clamp(16px, (62/1440) * 100vw, 72px);
   }
   .position {
-    color: #4d5bce;
     font-size: clamp(14px, (32/1440) * 100vw, 36px);
   }
 }

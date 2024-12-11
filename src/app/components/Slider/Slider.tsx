@@ -2,7 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
-import Snippet from "./Snippet";
+import Snippet from "../Snippets/Snippet";
+import styles from "./Slider.module.css";
 
 export default function Slider() {
   const slides = Array.from({ length: 8 }, (_, i) => i + 1);
@@ -25,7 +26,7 @@ export default function Slider() {
         modifier: 1.5,
         slideShadows: false,
       }}
-      style={{ height: "623px" }}
+      className={styles.swiper}
       direction={"vertical"}
       onSlideChange={(swiper) => {
         const slides = swiper.slides;
@@ -46,9 +47,9 @@ export default function Slider() {
           if (distance === 0) {
             slide.style.opacity = "1";
           } else if (distance === 1) {
-            slide.style.opacity = "0.4";
+            slide.style.opacity = "0.7";
           } else {
-            slide.style.opacity = "0.1";
+            slide.style.opacity = "0.3";
           }
         });
       }}
