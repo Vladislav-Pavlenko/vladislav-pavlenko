@@ -22,7 +22,7 @@ export default function FileListItem({ children }: FileListItemProps) {
 
   const handleClick = () => {
     const existingItem = allData.find(
-      (item: AboutDataItem) => item.file === children.toLowerCase()
+      (item: AboutDataItem) => item?.file === children.toLowerCase()
     );
 
     if (existingItem) {

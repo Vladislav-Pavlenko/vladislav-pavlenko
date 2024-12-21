@@ -8,10 +8,13 @@ export async function GET(request: Request) {
     const fileName = url.searchParams.get("file");
 
     if (!fileName) {
-      return NextResponse.json({
-        success: false,
-        message: "File name is required",
-      });
+      return NextResponse.json(
+        {
+          success: false,
+          message: "File name is required",
+        },
+        { status: 400 }
+      );
     }
 
     await initMongoConnect();
@@ -19,18 +22,24 @@ export async function GET(request: Request) {
     const data = await AboutMeCollection.findOne({ file: fileName }).lean();
 
     if (!data) {
-      return NextResponse.json({
-        success: false,
-        message: `No data found for file: ${fileName}`,
-      });
+      return NextResponse.json(
+        {
+          success: false,
+          message: `No data found`,
+        },
+        { status: 404 }
+      );
     }
 
     return NextResponse.json({ success: true, data });
   } catch (error) {
     console.error("Error fetching data:", error);
-    return NextResponse.json({
-      success: false,
-      message: "Failed to fetch data",
-    });
+    return NextResponse.json(
+      {
+        success: false,
+        message: "Failed to fetch data",
+      },
+      { status: 500 }
+    );
   }
 }
