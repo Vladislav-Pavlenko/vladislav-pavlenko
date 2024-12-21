@@ -2,12 +2,25 @@ import Link from "next/link.js";
 import styles from "./ModalMenu.module.css";
 import clsx from "clsx";
 import Footer from "../Footer/Footer";
+import { useEffect } from "react";
 
 interface ModalMenu {
   setVisible: React.Dispatch<React.SetStateAction<boolean>>;
   visible: boolean;
 }
 export default function ModalMenu({ setVisible, visible }: ModalMenu) {
+  useEffect(() => {
+    if (visible) {
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+    }
+
+    return () => {
+      document.documentElement.style.overflow = "";
+    };
+  }, [visible]);
+
   return (
     <div
       className={clsx(styles.backdrop, visible ? styles.open : styles.close)}

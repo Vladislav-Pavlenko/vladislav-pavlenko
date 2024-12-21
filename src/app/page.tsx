@@ -24,6 +24,7 @@ export default function Hello() {
       <div className={styles.footer_container}>
         <Footer />
       </div>
+
       <ModalMenu setVisible={setVisible} visible={visible} />
     </div>
   );

@@ -1,9 +1,9 @@
 .backdrop {
   transition: all 450ms ease-in-out;
   width: 100vw;
-  height: 102%;
+  height: 100vh;
   background-color: #010c15;
-  position: absolute;
+  position: fixed;
   top: -1px;
   z-index: 19;
   left: -1px;
@@ -11,10 +11,13 @@
 
 .modal {
   border-radius: 8px;
+  position: absolute;
   border: 1px solid #1e2d3d;
+  top: 16px;
+  left: 16px;
   background: #011627;
   width: 92vw;
-  height: 98%;
+  height: 95.5vh;
   display: flex;
   flex-direction: column;
 }
