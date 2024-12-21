@@ -23,7 +23,7 @@
 .container {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 350ms ease-in-out;
+  transition: max-height 650ms ease-in-out;
   display: flex;
   flex-direction: column;
 }

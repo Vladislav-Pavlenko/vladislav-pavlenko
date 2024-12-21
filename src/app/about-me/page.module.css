@@ -7,7 +7,7 @@
 }
 
 .title {
-  padding: 21px 27px 29px;
+  padding: 21px 27px 14.5px;
   font-size: clamp(10px, (14/375) * 100vw, 24px);
   font-weight: 450;
   line-height: 1.4;

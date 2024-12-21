@@ -1,0 +1,147 @@
+.section {
+  padding: 19px 27px 38px;
+}
+
+.title {
+  color: #fff;
+  font-size: clamp(12px, (16/375) * 100vw, 24px);
+  font-weight: 450;
+  line-height: 1.4;
+  margin-bottom: 29px;
+}
+
+.img {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin-right: 10.5px;
+}
+
+.container {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.info_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  color: #5565e8;
+  font-size: clamp(12px, (14/375) * 100vw, 24px);
+  font-weight: 700;
+}
+
+.time_ago {
+  color: #607b96;
+  font-size: clamp(10px, (12/375) * 100vw, 24px);
+  font-weight: 450;
+}
+
+.btn {
+  display: flex;
+  gap: 5px;
+  color: #607b96;
+  font-size: clamp(12px, (14/375) * 100vw, 24px);
+  font-weight: 450;
+  margin-left: auto;
+  transition: all 250ms ease-in-out;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+  }
+}
+
+.icon {
+  fill: #607b96;
+}
+
+.snippet_container {
+  border-radius: 15px;
+  border: 1px solid #1e2d3d;
+  background: #011221;
+  padding: 24px;
+  color: #607b96;
+  font-size: clamp(12px, (14/375) * 100vw, 24px);
+  font-weight: 450;
+  line-height: 1.7;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.snippet_container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.snippet_container::-webkit-scrollbar-thumb {
+  background: #607b96;
+  border-radius: 4px;
+}
+
+.snippet_container::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 0 8px;
+}
+
+.red {
+  color: #e99287;
+}
+
+.rose {
+  color: #c98bdf;
+}
+
+.violet {
+  color: #5565e8;
+}
+
+.green {
+  color: #43d9ad;
+}
+
+.details_modal {
+  padding: 0;
+  margin-top: 0;
+  border-top: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 350ms ease-in-out;
+}
+
+.details_message {
+  color: #607b96;
+  font-size: clamp(12px, (14/375) * 100vw, 24px);
+  font-weight: 450;
+  line-height: 1.5;
+}
+
+.details_btn {
+  padding: 4px;
+  margin-top: 3px;
+}
+
+.details_icon {
+  fill: #607b96;
+
+  &:hover,
+  &:focus,
+  &:active {
+    fill: #fff;
+  }
+}
+
+.open {
+  padding: 17px 0;
+  margin-top: 18px;
+  border-top: 1px solid #1e2d3d;
+  max-height: 400px;
+  opacity: 1;
+  visibility: visible;
+}

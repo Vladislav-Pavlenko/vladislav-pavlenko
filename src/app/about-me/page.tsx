@@ -13,6 +13,7 @@ import FileListItem from "./components/FileListItem/FileListItem";
 import Link from "./components/Link/Link";
 import OutputWindow from "./components/OutputWindow/OutputWindow";
 import withReduxPersist from "./../redux/withReduxPersist";
+import CodeSnippet from "./components/CodeSnippet/CodeSnippet";
 function AboutMe() {
   const [visible, setVisible] = useState(false);
 
@@ -90,6 +91,7 @@ function AboutMe() {
           </AboutListItem>
         </AboutList>
         <OutputWindow />
+        <CodeSnippet />
       </main>
       <Footer />
 

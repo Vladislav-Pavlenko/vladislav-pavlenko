@@ -5,8 +5,8 @@ import {
   selectIsLoading,
 } from "./../../../redux/fileStorage/selectors";
 import styles from "./OutputWindow.module.css";
-import { Triangle } from "react-loader-spinner";
-import Error from "../Error/Error";
+import Error from "../../../components/Error/Error";
+import Loader from "@/app/components/Loader/Loader";
 
 export default function OutputWindow() {
   const data = useSelector(selectCurrentData);
@@ -17,12 +17,7 @@ export default function OutputWindow() {
     <section className={styles.section}>
       {error && <Error error={error} />}
       {isLoading ? (
-        <Triangle
-          visible={true}
-          color="#ffffff"
-          ariaLabel="triangle-loading"
-          wrapperClass={styles.loader}
-        />
+        <Loader />
       ) : (
         <>
           <h2 className={styles?.path}>

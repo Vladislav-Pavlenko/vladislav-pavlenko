@@ -3,4 +3,5 @@
   display: flex;
   flex-direction: column;
   gap: 3px;
+  padding: 14.5px 0 19px;
 }
