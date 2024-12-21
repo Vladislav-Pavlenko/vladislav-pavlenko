@@ -8,21 +8,21 @@ export const TimeAgo: React.FC<TimeAgoProps> = ({ date }) => {
   );
 
   const intervals = [
-    ["year", 31536000],
-    ["month", 2592000],
-    ["day", 86400],
-    ["hour", 3600],
-    ["minute", 60],
-    ["second", 1],
+    ["рік", 31536000],
+    ["місяць", 2592000],
+    ["день", 86400],
+    ["година", 3600],
+    ["хвилина", 60],
+    ["секунда", 1],
   ] as const;
 
   const [label, count] = intervals.find(
-    ([_, seconds]) => diffInSeconds >= seconds
-  ) || ["second", 0];
+    ([, seconds]) => diffInSeconds >= seconds
+  ) || ["секунда", 0];
 
   const timeAgo = `${Math.floor(diffInSeconds / count)} ${label}${
-    Math.floor(diffInSeconds / count) > 1 ? "s" : ""
-  } ago`;
+    Math.floor(diffInSeconds / count) > 1 ? "и" : ""
+  } тому`;
 
   return <span>{timeAgo}</span>;
 };
