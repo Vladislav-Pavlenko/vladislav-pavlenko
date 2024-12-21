@@ -21,12 +21,16 @@ export default function OutputWindow() {
       ) : (
         <>
           <h2 className={styles?.path}>
-            {data?.category}&nbsp;
-            <span className={styles.path_span}>{data?.folder}</span>
+            {data?.category || "// category"}&nbsp;
+            <span className={styles.path_span}>
+              {data?.folder || "/ folder"}
+            </span>
           </h2>
           <p
             className={styles.text}
-            dangerouslySetInnerHTML={{ __html: data?.text }}
+            dangerouslySetInnerHTML={{
+              __html: data?.text || "Choose what interests you :)",
+            }}
           />
         </>
       )}
