@@ -41,6 +41,7 @@
 
 .btn {
   display: flex;
+  align-items: center;
   gap: 5px;
   color: #607b96;
   font-size: clamp(12px, (14/375) * 100vw, 24px);
@@ -144,4 +145,30 @@
   max-height: 400px;
   opacity: 1;
   visibility: visible;
+}
+
+@media screen and (min-width: 765px) {
+  .title {
+    font-size: clamp(12px, (16/765) * 100vw, 24px);
+  }
+
+  .link {
+    font-size: clamp(12px, (14/765) * 100vw, 24px);
+  }
+
+  .time_ago {
+    font-size: clamp(10px, (12/765) * 100vw, 24px);
+  }
+
+  .btn {
+    font-size: clamp(12px, (14/765) * 100vw, 24px);
+  }
+
+  .snippet_container {
+    font-size: clamp(12px, (14/765) * 100vw, 24px);
+  }
+
+  .details_message {
+    font-size: clamp(12px, (14/765) * 100vw, 24px);
+  }
 }
