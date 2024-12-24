@@ -20,7 +20,7 @@ function AboutMe() {
   return (
     <div className={styles.container}>
       <Header setVisible={setVisible} />
-      <main>
+      <main className={styles.main}>
         <h1 className={styles.title}>_about-me</h1>
         <AboutList>
           {/* Personal info */}
@@ -61,11 +61,22 @@ function AboutMe() {
               <FolderListItem color="green" name="summary">
                 <FileList>
                   <Link
-                    iconName="link"
-                    link="/file/pavlenko-vladislav-frontend-developer.pdf"
+                    iconName="download"
+                    link="/documents/pavlenko-vladyslav-frontend-developer.pdf"
                     download={true}
                   >
-                    go-to-summary
+                    download-summary
+                  </Link>
+                </FileList>
+              </FolderListItem>
+              <FolderListItem color="violet" name="certificates">
+                <FileList>
+                  <Link
+                    iconName="download"
+                    link="/documents/pavlenko-vladyslav-goit-sertificate.pdf"
+                    download={true}
+                  >
+                    GoIT-certificate
                   </Link>
                 </FileList>
               </FolderListItem>

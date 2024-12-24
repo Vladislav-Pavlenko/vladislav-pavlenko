@@ -2,11 +2,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
-import Snippet from "../Snippets/Snippet";
+import Snippets from "../Snippets/Snippets";
 import styles from "./Slider.module.css";
-
+interface itemSnippet {
+  id: string;
+  snippet: string;
+  starts: number;
+}
 export default function Slider() {
-  const slides = Array.from({ length: 8 }, (_, i) => i + 1);
+  const slides = Snippets();
   return (
     <Swiper
       modules={[Autoplay, EffectCoverflow]}
@@ -54,9 +58,14 @@ export default function Slider() {
         });
       }}
     >
-      {slides.map((src, index) => (
+      {slides.map((item: itemSnippet, index: number) => (
         <SwiperSlide key={index}>
-          <Snippet />
+          <p
+            className={styles.snippet}
+            dangerouslySetInnerHTML={{
+              __html: item?.snippet,
+            }}
+          ></p>
         </SwiperSlide>
       ))}
     </Swiper>

@@ -3,7 +3,7 @@
   align-items: center;
   gap: 8px;
   font-family: inherit;
-  font-size: clamp(12px, (16/375) * 100vw, 36px);
+  font-size: 16px;
   font-weight: 300;
   color: #607b96;
   transition: all 250ms ease-in-out;
@@ -14,10 +14,4 @@
 
 .icon {
   fill: #81a1c1;
-}
-
-@media screen and (min-width: 765px) {
-  .link {
-    font-size: clamp(12px, (16 / 765) * 100vw, 36px);
-  }
 }

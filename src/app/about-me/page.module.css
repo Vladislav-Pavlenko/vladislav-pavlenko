@@ -8,13 +8,17 @@
 
 .title {
   padding: 21px 27px 14.5px;
-  font-size: clamp(10px, (14/375) * 100vw, 24px);
+  font-size: clamp(10px, (14/375) * 100vw, 16px);
   font-weight: 450;
   line-height: 1.4;
 }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 1024px) {
   .title {
-    font-size: clamp(10px, (16/765) * 100vw, 24px);
+    display: none;
+  }
+
+  .main {
+    display: flex;
   }
 }

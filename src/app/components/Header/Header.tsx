@@ -12,7 +12,7 @@ export default function Header({ setVisible }: HeaderProps) {
   return (
     <header className={styles.header}>
       <Link className={styles.logo} href="/">
-        vladislav-pavlenko
+        vladyslav-pavlenko
       </Link>
       <ul className={styles.menu}>
         <li className={styles.menu_item}>

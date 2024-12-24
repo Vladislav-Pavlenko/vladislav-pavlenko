@@ -6,7 +6,7 @@
 }
 
 .path {
-  font-size: clamp(12px, (16/375) * 100vw, 24px);
+  font-size: 16px;
   font-weight: 450;
   line-height: 1.4;
 }
@@ -17,17 +17,40 @@
 
 .text {
   color: #607b96;
-  font-size: clamp(12px, (16/375) * 100vw, 24px);
+  font-size: 16px;
   font-weight: 450;
   line-height: 1.5;
 }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 1024px) {
   .path {
-    font-size: clamp(12px, (16/765) * 100vw, 24px);
+    border-bottom: 1px solid #1e2d3d;
+    padding: 11px 17px;
   }
 
   .text {
-    font-size: clamp(12px, (16/765) * 100vw, 24px);
+    padding: 10px 17px;
+    max-height: 647px;
+    overflow-y: auto;
+  }
+
+  .section {
+    min-width: 400px;
+    padding: 0;
+    border-right: 1px solid #1e2d3d;
+    gap: 0;
+  }
+
+  .text::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .text::-webkit-scrollbar-thumb {
+    background: #607b96;
+    border-radius: 4px;
+  }
+
+  .text::-webkit-scrollbar-track {
+    background: transparent;
   }
 }

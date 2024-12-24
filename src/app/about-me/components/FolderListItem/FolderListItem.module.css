@@ -3,7 +3,7 @@
   align-items: center;
   color: #607b96;
   font-family: inherit;
-  font-size: clamp(12px, (16/375) * 100vw, 36px);
+  font-size: 16px;
   font-weight: 300;
   transition: all 250ms ease-in-out;
 }
@@ -45,10 +45,4 @@
 
 .rotate {
   transform: rotate(90deg);
-}
-
-@media screen and (min-width: 765px) {
-  .btn {
-    font-size: clamp(12px, (16 / 765) * 100vw, 36px);
-  }
 }

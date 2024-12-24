@@ -5,3 +5,26 @@
   gap: 3px;
   padding: 14.5px 0 19px;
 }
+
+@media screen and (min-width: 1024px) {
+  .list {
+    max-width: 263px;
+    border-right: 1px solid #1e2d3d;
+    padding: 0;
+    max-height: 692px;
+    overflow-y: auto;
+  }
+
+  .list::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .list::-webkit-scrollbar-thumb {
+    background: #607b96;
+    border-radius: 4px;
+  }
+
+  .list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}

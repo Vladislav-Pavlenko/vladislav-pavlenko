@@ -4,14 +4,14 @@
 
 .welcome {
   color: #e5e9f0;
-  font-size: clamp(12px, (18/375) * 100vw, 36px);
+  font-size: clamp(14px, (18/375) * 100vw, 18px);
   font-weight: 450;
   margin-bottom: 10px;
 }
 
 .title {
   color: #e5e9f0;
-  font-size: clamp(16px, (54/375) * 100vw, 72px);
+  font-size: clamp(16px, (54/375) * 100vw, 62px);
   font-weight: 400;
   line-height: 1;
   margin-bottom: 5px;
@@ -19,7 +19,7 @@
 
 .position {
   color: #43d9ad;
-  font-size: clamp(14px, (20/375) * 100vw, 36px);
+  font-size: clamp(16px, (20/375) * 100vw, 20px);
   font-weight: 450;
 }
 
@@ -27,14 +27,17 @@
   .section {
     padding: 90px 27px;
   }
+
   .welcome {
-    font-size: clamp(12px, (18/765) * 100vw, 36px);
+    font-size: 18px;
   }
+
   .title {
-    font-size: clamp(16px, (54/765) * 100vw, 72px);
+    font-size: clamp(16px, (54/765) * 100vw, 62px);
   }
+
   .position {
-    font-size: clamp(14px, (20/765) * 100vw, 36px);
+    font-size: 20px;
   }
 }
 
@@ -42,15 +45,14 @@
   .section {
     padding: 150px 0 21px 100px;
   }
-  .welcome {
-    font-size: clamp(12px, (18/765) * 100vw, 36px);
-  }
+
   .title {
-    font-size: clamp(16px, (62/765) * 100vw, 72px);
+    font-size: 62px;
   }
+
   .position {
     color: #4d5bce;
-    font-size: clamp(14px, (32/765) * 100vw, 36px);
+    font-size: 32px;
   }
 }
 

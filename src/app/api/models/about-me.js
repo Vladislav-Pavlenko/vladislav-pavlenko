@@ -1,7 +1,6 @@
 import { model, models, Schema } from "mongoose";
 import { handleSaveError, setUpdateOptions } from "./hooks";
 
-// Створення схеми
 const aboutMeSchema = new Schema(
   {
     category: {

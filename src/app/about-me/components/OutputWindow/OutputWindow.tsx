@@ -3,9 +3,9 @@ import {
   selectCurrentData,
   selectError,
   selectIsLoading,
-} from "./../../../redux/fileStorage/selectors";
+} from "@/app/redux/fileStorage/selectors";
 import styles from "./OutputWindow.module.css";
-import Error from "../../../components/Error/Error";
+import Error from "@/app/components/Error/Error";
 import Loader from "@/app/components/Loader/Loader";
 
 export default function OutputWindow() {

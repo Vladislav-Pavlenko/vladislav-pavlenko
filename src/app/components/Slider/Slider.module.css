@@ -1,3 +1,14 @@
 .swiper {
   height: 663px;
 }
+
+.snippet {
+  border-radius: 15px;
+  border: 1px solid #1e2d3d;
+  background: #011221;
+  padding: 24px;
+  color: #607b96;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 1.7;
+}
