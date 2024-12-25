@@ -28,7 +28,7 @@ export default function ModalMenu({ setVisible, visible }: ModalMenu) {
       <div className={styles.modal}>
         <div className={styles.header}>
           <Link className={styles.logo} href="/">
-            vladislav-pavlenko
+            vladyslav-pavlenko
           </Link>
           <button className={styles.btn} onClick={() => setVisible(false)}>
             <svg className={styles.svg} width={16} height={16}>

@@ -37,9 +37,7 @@
   font-weight: 450;
   margin-left: auto;
   transition: all 250ms ease-in-out;
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     color: #fff;
   }
 }
@@ -49,8 +47,7 @@
   fill: #607b96;
 }
 
-.btn:hover .icon,
-.btn:focus .icon {
+.btn:hover .icon {
   fill: #ffffff;
 }
 
