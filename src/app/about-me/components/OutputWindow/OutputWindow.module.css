@@ -35,7 +35,7 @@
   }
 
   .section {
-    min-width: 400px;
+    min-width: 300px;
     padding: 0;
     border-right: 1px solid #1e2d3d;
     gap: 0;

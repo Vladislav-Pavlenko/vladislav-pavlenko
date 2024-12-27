@@ -8,11 +8,12 @@
 
 @media screen and (min-width: 1024px) {
   .list {
-    max-width: 263px;
+    min-width: 263px;
     border-right: 1px solid #1e2d3d;
     padding: 0;
     max-height: 692px;
     overflow-y: auto;
+    max-width: 290px;
   }
 
   .list::-webkit-scrollbar {

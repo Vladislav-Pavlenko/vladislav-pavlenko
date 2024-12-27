@@ -37,7 +37,8 @@
   font-weight: 450;
   margin-left: auto;
   transition: all 250ms ease-in-out;
-  &:hover {
+  &:hover,
+  &:focus {
     color: #fff;
   }
 }
@@ -47,7 +48,8 @@
   fill: #607b96;
 }
 
-.btn:hover .icon {
+.btn:hover .icon,
+.btn:focus .icon {
   fill: #ffffff;
 }
 
@@ -137,7 +139,8 @@
     font-weight: 450;
     margin-left: 18px;
     transition: all 250ms ease-in-out;
-    &:hover {
+    &:hover,
+    &:focus {
       color: #fff;
     }
   }
@@ -148,7 +151,8 @@
     transition: all 250ms ease-in-out;
   }
 
-  .btn_star:hover .icon_star {
+  .btn_star:hover .icon_star,
+  .btn_star:focus .icon_star {
     fill: #607b96;
   }
 

@@ -37,15 +37,12 @@ const snippetsSlice = createSlice({
         state.snippets = action.payload.data;
       })
       .addCase(updateSnippetStars.pending, (state) => {
-        state.isLoading = true;
         state.error = null;
       })
       .addCase(updateSnippetStars.rejected, (state, action) => {
-        state.isLoading = false;
         state.error = action.payload;
       })
       .addCase(updateSnippetStars.fulfilled, (state, action) => {
-        state.isLoading = false;
         state.error = null;
         const updatedSnippet = action.payload.data;
         const index = state.snippets.findIndex(
