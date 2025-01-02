@@ -1,0 +1,42 @@
+.section {
+  padding: 14.5px 0 19px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background-color: #1e2d3d;
+  width: 100%;
+  padding: 5px 27.5px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.icon {
+  transition: transform 350ms ease-in-out;
+  fill: #ffffff;
+}
+
+.list {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 650ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  margin-left: 27.5px;
+  gap: 16px;
+}
+
+.active {
+  max-height: 400px;
+  margin-top: 21px;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+@media screen and (min-width: 1024px) {
+}

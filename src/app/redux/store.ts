@@ -12,6 +12,7 @@ import {
 import storage from "redux-persist/lib/storage";
 import fileStorageReducer from "./fileStorage/slice";
 import snippetsReducer from "./snippets/slice";
+import projectsReducer from "./projects/slice";
 
 const persistfileStorageReducer = persistReducer(
   {
@@ -26,6 +27,7 @@ export const store = configureStore({
   reducer: {
     fileStorage: persistfileStorageReducer,
     snippets: snippetsReducer,
+    projects: projectsReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

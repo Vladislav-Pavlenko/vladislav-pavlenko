@@ -5,7 +5,7 @@ import { SnippetsCollection } from "../../models/snippets.js";
 export async function PATCH(request: Request) {
   try {
     const url = new URL(request.url);
-    const id = url.searchParams.get("file");
+    const id = url.searchParams.get("id");
 
     if (!id) {
       return NextResponse.json(

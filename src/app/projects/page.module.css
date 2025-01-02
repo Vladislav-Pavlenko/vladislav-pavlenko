@@ -1,0 +1,24 @@
+.container {
+  border-radius: 8px;
+  border: 1px solid #1e2d3d;
+  background: #011627;
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  padding: 21px 27px 14.5px;
+  font-size: clamp(10px, (14/375) * 100vw, 16px);
+  font-weight: 450;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 1024px) {
+  .title {
+    display: none;
+  }
+
+  .main {
+    display: flex;
+  }
+}

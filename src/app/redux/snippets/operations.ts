@@ -21,7 +21,7 @@ export const updateSnippetStars = createAsyncThunk(
   async ({ id, stars }: { id: string; stars: number }, { rejectWithValue }) => {
     try {
       const response = await axios.patch(
-        `api/snippets/update-snippet?file=${id}`,
+        `api/snippets/update-snippet?id=${id}`,
         { stars }
       );
       return response.data;

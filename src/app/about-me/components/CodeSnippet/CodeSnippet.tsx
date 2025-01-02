@@ -14,7 +14,6 @@ export default function CodeSnippet() {
   const snippets = Snippets();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
-  console.log(error?.message);
   if (error) {
     toast.error(error?.message);
   }
