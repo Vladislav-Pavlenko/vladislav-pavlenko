@@ -39,6 +39,7 @@ export default function FilterListItem({
           id={inputId}
           className={styles.input}
           onChange={handleCheckboxChange}
+          checked={iconName in filters}
         />
         <svg className={styles.icon} width={16} height={15.5}>
           <use href={`/images/icons.svg#icon-${iconName}`}></use>

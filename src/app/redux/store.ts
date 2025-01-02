@@ -14,7 +14,7 @@ import fileStorageReducer from "./fileStorage/slice";
 import snippetsReducer from "./snippets/slice";
 import projectsReducer from "./projects/slice";
 
-const persistfileStorageReducer = persistReducer(
+const persistFileStorageReducer = persistReducer(
   {
     key: "fileStorage",
     storage,
@@ -23,11 +23,20 @@ const persistfileStorageReducer = persistReducer(
   fileStorageReducer
 );
 
+const persistProjectsReducer = persistReducer(
+  {
+    key: "projects",
+    storage,
+    whitelist: ["filters", "projects"],
+  },
+  projectsReducer
+);
+
 export const store = configureStore({
   reducer: {
-    fileStorage: persistfileStorageReducer,
+    fileStorage: persistFileStorageReducer,
     snippets: snippetsReducer,
-    projects: projectsReducer,
+    projects: persistProjectsReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

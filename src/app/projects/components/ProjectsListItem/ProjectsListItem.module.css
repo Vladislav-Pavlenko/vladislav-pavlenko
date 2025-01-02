@@ -96,3 +96,9 @@
 .node {
   background-color: #81d4af;
 }
+
+@media screen and (min-width: 1200px) {
+  .li {
+    max-width: 32vw;
+  }
+}

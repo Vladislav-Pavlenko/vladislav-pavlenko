@@ -4,7 +4,7 @@
 
 .title {
   font-size: 16px;
-  font-weight: 450;
+  font-weight: 300;
   margin-bottom: 17px;
 }
 
@@ -12,4 +12,59 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.title_filters {
+  color: #607b96;
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 0;
+  }
+
+  .title_section {
+    display: none;
+  }
+
+  .title {
+    margin-bottom: 0;
+    padding: 10px 22px;
+    border-bottom: 1px solid #1e2d3d;
+    height: 45px;
+  }
+
+  .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px;
+    max-height: 594px;
+    overflow-y: auto;
+  }
+  .list::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .list::-webkit-scrollbar-thumb {
+    background: #607b96;
+    border-radius: 4px;
+  }
+
+  .list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    padding: 0;
+    width: 100%;
+  }
+
+  .list {
+    gap: 40px;
+  }
 }

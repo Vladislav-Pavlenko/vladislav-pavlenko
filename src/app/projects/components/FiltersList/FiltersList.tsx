@@ -2,9 +2,12 @@ import clsx from "clsx";
 import FiltersListItem from "../FiltersListItem/FilterListItem";
 import styles from "./FilterList.module.css";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { selectProjectsFilters } from "@/app/redux/projects/selectors";
 
 export default function FiltersList() {
   const [visible, setVisible] = useState(false);
+  const filters = useSelector(selectProjectsFilters);
   const toggleVisibility = () => {
     setVisible((prev): boolean => !prev);
   };
@@ -20,7 +23,12 @@ export default function FiltersList() {
         </svg>
         projects
       </button>
-      <ul className={clsx(styles.list, visible && styles.active)}>
+      <ul
+        className={clsx(
+          styles.list,
+          visible || (filters.length !== 0 && styles.active)
+        )}
+      >
         <FiltersListItem iconName="html">HTML</FiltersListItem>
         <FiltersListItem iconName="css">CSS</FiltersListItem>
         <FiltersListItem iconName="react">React</FiltersListItem>
