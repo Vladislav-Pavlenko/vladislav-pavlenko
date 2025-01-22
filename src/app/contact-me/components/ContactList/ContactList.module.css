@@ -1,0 +1,47 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background-color: #1e2d3d;
+  width: 100%;
+  padding: 5px 27.5px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.icon {
+  transition: transform 350ms ease-in-out;
+  fill: #ffffff;
+}
+
+.list {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 650ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  margin-left: 27.5px;
+  gap: 9.1px;
+}
+
+.active {
+  max-height: 400px;
+  margin-top: 12px;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    padding: 10px 22px;
+    border-bottom: 1px solid #1e2d3d;
+    background-color: transparent;
+  }
+
+  .active {
+    margin-top: 14px;
+  }
+}

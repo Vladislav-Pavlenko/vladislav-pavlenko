@@ -1,0 +1,53 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.code {
+  color: #607b96;
+  font-family: "Fira Code";
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 1.5;
+  overflow-x: scroll;
+  max-width: 35vw;
+}
+
+.code::-webkit-scrollbar {
+  height: 2px;
+}
+
+.code::-webkit-scrollbar-thumb {
+  background: #607b96;
+  border-radius: 4px;
+}
+
+.code::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rose {
+  color: #c98bdf;
+}
+
+.violet {
+  color: #5565e8;
+}
+
+.orange {
+  color: #fea55f;
+}
+
+@media screen and (min-width: 1440px) {
+  .code {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section {
+    display: none;
+  }
+}

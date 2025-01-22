@@ -12,9 +12,12 @@
     "@reduxjs/toolkit": "^2.5.0",
     "axios": "^1.7.9",
     "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
     "dotenv": "^16.4.7",
+    "formik": "^2.4.6",
     "mongoose": "^8.9.1",
     "next": "15.0.3",
+    "nodemailer": "^6.9.16",
     "normalize.css": "^8.0.1",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
@@ -22,10 +25,12 @@
     "react-loader-spinner": "^6.1.6",
     "react-redux": "^9.2.0",
     "redux-persist": "^6.0.0",
-    "swiper": "^11.1.15"
+    "swiper": "^11.1.15",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
