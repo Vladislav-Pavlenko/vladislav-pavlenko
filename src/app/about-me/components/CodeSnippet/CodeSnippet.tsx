@@ -9,6 +9,7 @@ interface itemSnippet {
   id: string;
   snippet: string;
   stars: number;
+  details: string;
 }
 export default function CodeSnippet() {
   const snippets = Snippets();
