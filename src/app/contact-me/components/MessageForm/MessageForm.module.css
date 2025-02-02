@@ -103,7 +103,7 @@
   .section {
     max-width: 400px;
     border-right: 1px solid var(--dark-navy);
-    min-height: 523px;
+    min-height: calc(100vh - 72px - 52.4px - 53px);
     min-width: 36vw;
   }
 
@@ -117,6 +117,6 @@
 
 @media screen and (min-width: 1440px) {
   .section {
-    min-height: 493px;
+    min-height: calc(100vh - 94px - 52.4px - 56px);
   }
 }
