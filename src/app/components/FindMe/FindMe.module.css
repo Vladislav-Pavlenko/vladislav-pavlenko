@@ -3,7 +3,7 @@
 }
 
 .comment {
-  color: #607b96;
+  color: var(--steel-blue);
   font-size: 14px;
   font-weight: 450;
   line-height: 1.4;
@@ -18,18 +18,18 @@
 }
 
 .const {
-  color: #4d5bce;
+  color: var(--indigo-blue);
 }
 
 .name {
-  color: #43d9ad;
+  color: var(--mint-green);
 }
 
 .githubLink {
-  color: #e99287;
+  color: var(--coral-pink);
 }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .section {
     padding: 85px 27px;
   }
@@ -37,7 +37,7 @@
 
 @media screen and (min-width: 1024px) {
   .section {
-    padding: 20px 30px 150px 100px;
+    padding: 20px 30px 0 100px;
   }
 
   .comment {

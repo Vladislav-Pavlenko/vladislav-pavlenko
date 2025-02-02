@@ -1,7 +1,7 @@
 .container {
   border-radius: 8px;
-  border: 1px solid #1e2d3d;
-  background: #011627;
+  border: 1px solid var(--dark-navy);
+  background: var(--ocean-depth);
   background-image: url("/images/home-blur-mob.png");
   background-position: center;
   background-size: cover;
@@ -16,10 +16,21 @@
 .main {
   display: flex;
   flex-direction: column;
+  height: calc(100vh - 31px - 55.2px);
 }
 
 .slider_container {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    background-position: top;
+  }
+
+  .main {
+    height: calc(100vh - 56px - 55.2px);
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -32,6 +43,7 @@
 
   .main {
     flex-direction: row;
+    height: calc(100vh - 72px - 52.4px - 53px);
   }
 
   .slider_container {
@@ -41,6 +53,9 @@
 
   .info_container {
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .footer_container {
@@ -49,6 +64,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .main {
+    height: calc(100vh - 96px - 52.4px - 53px);
+  }
+
   .info_container {
     max-width: 660px;
   }

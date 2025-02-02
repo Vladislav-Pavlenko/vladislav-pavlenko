@@ -7,7 +7,7 @@
 }
 
 .error_message {
-  color: #fff;
+  color: var(--foreground);
   font-size: clamp(12px, (16/375) * 100vw, 24px);
   font-weight: 450;
   line-height: 1.4;

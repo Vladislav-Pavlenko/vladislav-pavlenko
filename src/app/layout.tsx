@@ -12,6 +12,9 @@ const FiraCode = Fira_Code({
 export const metadata: Metadata = {
   title: "Vladislav Pavlenko",
   description: "Personal portfolio Vladislav Pavlenko",
+  icons: {
+    icon: "images/favicon.png",
+  },
 };
 
 export default function RootLayout({

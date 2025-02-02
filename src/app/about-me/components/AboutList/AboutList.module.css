@@ -9,9 +9,9 @@
 @media screen and (min-width: 1024px) {
   .list {
     min-width: 263px;
-    border-right: 1px solid #1e2d3d;
+    border-right: 1px solid var(--dark-navy);
     padding: 0;
-    max-height: 692px;
+    max-height: calc(100vh - 72px - 52.4px - 53px);
     overflow-y: auto;
     max-width: 290px;
   }
@@ -21,11 +21,17 @@
   }
 
   .list::-webkit-scrollbar-thumb {
-    background: #607b96;
+    background: var(--steel-blue);
     border-radius: 4px;
   }
 
   .list::-webkit-scrollbar-track {
     background: transparent;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list {
+    max-height: calc(100vh - 96px - 52.4px - 53px);
   }
 }

@@ -23,7 +23,7 @@
 }
 
 .time_ago {
-  color: #607b96;
+  color: var(--steel-blue);
   font-size: 12px;
   font-weight: 450;
 }
@@ -32,33 +32,33 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  color: #607b96;
+  color: var(--steel-blue);
   font-size: 14px;
   font-weight: 450;
   margin-left: auto;
   transition: all 250ms ease-in-out;
   &:hover,
-  &:focus {
-    color: #fff;
+  &:focus-visible {
+    color: var(--foreground);
   }
 }
 
 .icon {
   transition: all 250ms ease-in-out;
-  fill: #607b96;
+  fill: var(--steel-blue);
 }
 
 .btn:hover .icon,
-.btn:focus .icon {
-  fill: #ffffff;
+.btn:focus-visible .icon {
+  fill: var(--foreground);
 }
 
 .snippet_container {
   border-radius: 15px;
-  border: 1px solid #1e2d3d;
-  background: #011221;
+  border: 1px solid var(--dark-navy);
+  background: var(--dark-teal);
   padding: 24px;
-  color: #607b96;
+  color: var(--steel-blue);
   font-size: 14px;
   font-weight: 450;
   line-height: 1.7;
@@ -71,7 +71,7 @@
 }
 
 .snippet_container::-webkit-scrollbar-thumb {
-  background: #607b96;
+  background: var(--steel-blue);
   border-radius: 4px;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .details_message {
-  color: #607b96;
+  color: var(--steel-blue);
   font-size: 14px;
   font-weight: 450;
   line-height: 1.5;
@@ -107,19 +107,18 @@
 }
 
 .details_icon {
-  fill: #607b96;
+  fill: var(--steel-blue);
   transition: all 250ms ease-in-out;
   &:hover,
-  &:focus,
-  &:active {
-    fill: #fff;
+  &:focus-visible {
+    fill: var(--foreground);
   }
 }
 
 .open {
   padding: 17px 0;
   margin-top: 18px;
-  border-top: 1px solid #1e2d3d;
+  border-top: 1px solid var(--dark-navy);
   max-height: 400px;
   opacity: 1;
   visibility: visible;
@@ -134,29 +133,29 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    color: #607b96;
+    color: var(--steel-blue);
     font-size: 14px;
     font-weight: 450;
     margin-left: 18px;
     transition: all 250ms ease-in-out;
     &:hover,
-    &:focus {
-      color: #fff;
+    &:focus-visible {
+      color: var(--foreground);
     }
   }
 
   .icon_star {
     fill: transparent;
-    stroke: #607b96;
+    stroke: var(--steel-blue);
     transition: all 250ms ease-in-out;
   }
 
   .btn_star:hover .icon_star,
-  .btn_star:focus .icon_star {
-    fill: #607b96;
+  .btn_star:focus-visible .icon_star {
+    fill: var(--steel-blue);
   }
 
   .liked {
-    fill: #607b96;
+    fill: var(--steel-blue);
   }
 }

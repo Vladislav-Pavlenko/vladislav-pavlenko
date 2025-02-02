@@ -12,6 +12,7 @@ interface SnippetProps {
     id: string;
     snippet: string;
     stars: number;
+    details: string;
   };
 }
 export default function Snippet({ snippet }: SnippetProps) {
@@ -89,10 +90,7 @@ export default function Snippet({ snippet }: SnippetProps) {
         }}
       />
       <div className={clsx(styles.details_modal, visible && styles.open)}>
-        <p className={styles.details_message}>
-          My work here was 5 months ago. It was for the project called “...”.
-          Some other text can be placed here.
-        </p>
+        <p className={styles.details_message}>{snippet?.details}</p>
         <button
           className={styles.details_btn}
           type="button"

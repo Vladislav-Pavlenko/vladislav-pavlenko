@@ -12,11 +12,11 @@
 }
 
 .path_span {
-  color: #607b96;
+  color: var(--steel-blue);
 }
 
 .text {
-  color: #607b96;
+  color: var(--steel-blue);
   font-size: 16px;
   font-weight: 450;
   line-height: 1.5;
@@ -24,20 +24,21 @@
 
 @media screen and (min-width: 1024px) {
   .path {
-    border-bottom: 1px solid #1e2d3d;
+    border-bottom: 1px solid var(--dark-navy);
     padding: 11px 17px;
   }
 
   .text {
     padding: 10px 17px;
-    max-height: 647px;
+    max-height: 478px;
     overflow-y: auto;
   }
 
   .section {
     min-width: 300px;
+    width: 100%;
     padding: 0;
-    border-right: 1px solid #1e2d3d;
+    border-right: 1px solid var(--dark-navy);
     gap: 0;
   }
 
@@ -46,11 +47,17 @@
   }
 
   .text::-webkit-scrollbar-thumb {
-    background: #607b96;
+    background: var(--steel-blue);
     border-radius: 4px;
   }
 
   .text::-webkit-scrollbar-track {
     background: transparent;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .text {
+    max-height: calc(100vh - 96px - 52.4px - 53px - 45.2px);
   }
 }

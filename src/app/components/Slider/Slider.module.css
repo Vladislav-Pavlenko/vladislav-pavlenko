@@ -1,14 +1,18 @@
-.swiper {
-  height: 663px;
-}
-
 .snippet {
   border-radius: 15px;
-  border: 1px solid #1e2d3d;
-  background: #011221;
+  border: 1px solid var(--dark-navy);
+  background: var(--dark-teal);
   padding: 24px;
-  color: #607b96;
+  color: var(--steel-blue);
   font-size: 14px;
   font-weight: 450;
   line-height: 1.7;
+  word-wrap: break-word;
+  width: 480px;
+}
+
+@media screen and (min-width: 1440px) {
+  .snippet {
+    width: 580px;
+  }
 }

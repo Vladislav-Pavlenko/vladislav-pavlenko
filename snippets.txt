@@ -1,0 +1,84 @@
+
+1
+try {
+  const { MONGODB_USER, MONGODB_PASSWORD, MONGODB_URL, MONGODB_DB } = process.env;
+  await mongoose.connect(`mongodb+srv://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_URL}/${MONGODB_DB}?retryWrites=true&w=majority&appName=My-contacts`);
+  console.log("Mongo connection successful!");
+} catch (error) {
+  console.error("Mongo connection error", error);
+  throw error;
+}
+
+Цей сніпет демонструє, як підключити MongoDB за допомогою mongoose та змінних середовища для зберігання конфіденційних даних (користувач, пароль, URL).
+
+2
+const data = await ProjectsCollection.find(filters).lean();
+if (!data.length) {
+  return NextResponse.json({ success: false, message: "No data found", filters: searchParams }, { status: 404 });
+}
+return NextResponse.json({ success: true, data, filters: searchParams });
+
+Цей сніпет шукає дані в базі даних за заданими фільтрами. Якщо дані не знайдено, повертається помилка 404. Якщо дані є, відправляється успішний результат із відповідними даними.
+
+3
+export const fetchSnippets = createAsyncThunk(
+  "snippets/fetchSnippets",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await axios.get("api/snippets");
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(
+        axios.isAxiosError(error) ? error.response?.data : "Unknown error"
+      );
+    }
+  }
+);
+
+Обробка асинхронних запитів з використанням createAsyncThunk в Redux для взаємодії з API.
+
+4
+.addCase(updateSnippetStars.fulfilled, (state, { payload }) => {
+  const updatedSnippet = payload.data;
+  const index = state.snippets.findIndex(snippet => snippet.id === updatedSnippet.id);
+  if (index !== -1) state.snippets[index] = updatedSnippet;
+})
+
+Цей сніпет обробляє успішне оновлення сніпета за допомогою fulfilled у Redux. Якщо сніпет з таким id існує, його дані оновлюються в стані.
+5
+<ul className={styles.list}>
+  {snippets.map((item: itemSnippet, index: number) => {
+    return (
+      <li key={index} className={styles.item}>
+        <Snippet snippet={item} />
+      </li>
+    );
+  })}
+</ul>
+
+Цей код відображає список сніпетів, використовуючи метод map для перебору масиву snippets. Кожен сніпет передається в компонент Snippet, що рендерить його в окремому елементі <li> з унікальним key для коректного оновлення DOM.
+ 
+ 6
+ <p className={styles.snippet_container} dangerouslySetInnerHTML={{ __html: snippet?.snippet }} />
+{visible && (
+  <div className={styles.details_modal}>
+    <p className={styles.details_message}>{snippet?.details}</p>
+    <button className={styles.details_btn} onClick={changeVisible}>
+      <svg className={styles.details_icon} width={10} height={10}>
+        <use href="/images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+)}
+Цей код відображає сніпет і, якщо visible активний, показує модальне вікно з деталями. dangerouslySetInnerHTML вставляє HTML-код сніпета, а кнопка закриває модальне вікно через changeVisible.
+
+7
+.details_icon {
+  fill: var(--steel-blue);
+  transition: all 250ms ease-in-out;
+  &:hover,
+  &:focus-visible {
+    fill: var(--foreground);
+  }
+}
+Стилізація іконки закриття деталей з плавним переходом кольору при наведенні.

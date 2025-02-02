@@ -10,6 +10,7 @@ import Slider from "./components/Slider/Slider";
 import withReduxPersist from "./redux/withReduxPersist";
 
 function Hello() {
+  
   const [visible, setVisible] = useState(false);
   return (
     <div className={styles.container}>
@@ -26,7 +27,6 @@ function Hello() {
       <div className={styles.footer_container}>
         <Footer />
       </div>
-
       <ModalMenu setVisible={setVisible} visible={visible} />
     </div>
   );

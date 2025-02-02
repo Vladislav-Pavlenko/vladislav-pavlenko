@@ -15,7 +15,7 @@ export default function FiltersList() {
     <section className={styles.section}>
       <button className={styles.btn} type="button" onClick={toggleVisibility}>
         <svg
-          className={clsx(styles.icon, visible && styles.rotate)}
+          className={clsx(styles.icon, !visible && styles.rotate)}
           width={11}
           height={8}
         >

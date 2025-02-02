@@ -1,32 +1,46 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import "normalize.css";
 
 :root {
   --background: #010c15;
   --foreground: #ffffff;
+  --midnight-blue: #01080e;
+  --ocean-depth: #011627;
+  --dark-teal: #011221;
+  --steel-blue: #607b96;
+  --lavender-purple: #c98bdf;
+  --coral-pink: #e99287;
+  --mint-green: #43d9ad;
+  --sunset-orange: #fea55f;
+  --indigo-blue: #4d5bce;
+  --turquoise-green: #3c9d93;
+  --dark-navy: #1e2d3d;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  padding: calc((15 / 375) * 100vw);
+  padding: 15px;
   font-size: 16px;
   font-weight: 450;
 }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   body {
-    padding: calc((15 / 765) * 100vw);
+    padding: 28px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 @media screen and (min-width: 1440px) {
   body {
-    padding: calc((52 / 1440) * 100vw);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 48px;
   }
 }

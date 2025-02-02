@@ -6,6 +6,7 @@ const snippetSchema = new Schema(
     id: { type: String },
     snippet: { type: String },
     stars: { type: Number },
+    details: { type: String },
   },
   { timestamps: true, versionKey: false }
 );

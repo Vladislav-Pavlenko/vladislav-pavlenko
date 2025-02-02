@@ -3,7 +3,7 @@
 }
 
 .title {
-  color: #fff;
+  color: var(--foreground);
   font-size: 16px;
   font-weight: 450;
   line-height: 1.4;
@@ -22,9 +22,9 @@
 
   .title {
     padding: 9.5px 17px;
-    color: #607b96;
+    color: var(--steel-blue);
     font-size: 18px;
-    border-bottom: 1px solid #1e2d3d;
+    border-bottom: 1px solid var(--dark-navy);
     margin: 0;
   }
 
@@ -37,7 +37,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-height: 647px;
+    max-height: 478px;
     overflow-y: auto;
   }
 
@@ -46,11 +46,17 @@
   }
 
   .list::-webkit-scrollbar-thumb {
-    background: #607b96;
+    background: var(--steel-blue);
     border-radius: 4px;
   }
 
   .list::-webkit-scrollbar-track {
     background: transparent;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list {
+    max-height: calc(100vh - 96px - 52.4px - 53px - 45.2px);
   }
 }

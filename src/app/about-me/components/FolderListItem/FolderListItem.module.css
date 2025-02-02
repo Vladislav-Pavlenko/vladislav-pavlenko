@@ -1,7 +1,7 @@
 .btn {
   display: flex;
   align-items: center;
-  color: #607b96;
+  color: var(--steel-blue);
   font-family: inherit;
   font-size: 16px;
   font-weight: 300;
@@ -9,8 +9,8 @@
 }
 
 .icon_arrow {
-  transition: transform 350ms ease-in-out;
-  fill: #607b96;
+  transition: transform 850ms ease-in-out;
+  fill: var(--steel-blue);
   margin-right: 13px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .red {
-  fill: #e99287;
+  fill: var(--coral-pink);
 }
 
 .violet {
@@ -27,20 +27,20 @@
 }
 
 .green {
-  fill: #43d9ad;
+  fill: var(--mint-green);
 }
 
 .container {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 650ms ease-in-out;
+  transition: max-height 850ms ease-in-out;
   display: flex;
   flex-direction: column;
 }
 
 .active {
   max-height: 200px;
-  color: #ffffff;
+  color: var(--foreground);
 }
 
 .rotate {

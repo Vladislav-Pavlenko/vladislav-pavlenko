@@ -4,6 +4,7 @@ interface snippet {
   id: string;
   snippet: string;
   stars: number;
+  details: string;
 }
 
 interface initialState {
@@ -17,6 +18,7 @@ const initialState: initialState = {
   isLoading: false,
   error: null,
 };
+
 const snippetsSlice = createSlice({
   name: "snippets",
   initialState,

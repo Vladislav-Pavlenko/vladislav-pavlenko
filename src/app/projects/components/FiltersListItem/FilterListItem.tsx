@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useId, useState } from "react";
 import styles from "./FiltersListItem.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "@/app/redux/store";
@@ -17,9 +17,11 @@ export default function FilterListItem({
   const inputId = useId();
   const dispatch = useDispatch<AppDispatch>();
   const filters = useSelector(selectProjectsFilters);
+  const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
+    setIsChecked(checked);
 
     if (checked) {
       dispatch(fetchProjects({ ...filters, [name]: true }));
@@ -37,13 +39,10 @@ export default function FilterListItem({
           type="checkbox"
           name={iconName}
           id={inputId}
-          className={styles.input}
+          checked={isChecked || iconName in filters}
           onChange={handleCheckboxChange}
-          checked={iconName in filters}
+          className={styles.input}
         />
-        <svg className={styles.icon} width={16} height={15.5}>
-          <use href={`/images/icons.svg#icon-${iconName}`}></use>
-        </svg>
         {children}
       </label>
     </li>

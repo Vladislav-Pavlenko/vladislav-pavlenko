@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   gap: 11px;
-  background-color: #1e2d3d;
+  background-color: var(--dark-navy);
   width: 100%;
   padding: 5px 27.5px;
   font-family: inherit;
@@ -11,14 +11,14 @@
 }
 
 .icon {
-  transition: transform 350ms ease-in-out;
-  fill: #ffffff;
+  transition: transform 850ms ease-in-out;
+  fill: var(--foreground);
 }
 
 .list {
   overflow: hidden;
   max-height: 0;
-  transition: all 650ms ease-in-out;
+  transition: all 850ms ease-in-out;
   display: flex;
   flex-direction: column;
   margin-left: 27.5px;
@@ -28,6 +28,7 @@
 .active {
   max-height: 400px;
   margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .rotate {
@@ -37,7 +38,7 @@
 @media screen and (min-width: 1024px) {
   .btn {
     padding: 10px 22px;
-    border-bottom: 1px solid #1e2d3d;
+    border-bottom: 1px solid var(--dark-navy);
     background-color: transparent;
   }
 

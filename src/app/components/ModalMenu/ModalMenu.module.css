@@ -2,21 +2,21 @@
   transition: all 450ms ease-in-out;
   width: 100vw;
   height: 101vh;
-  background-color: #010c15;
+  background-color: var(--background);
   position: fixed;
   top: 0px;
   z-index: 19;
   left: 0px;
-  padding: calc((15 / 375) * 100vw);
+  padding: 15px;
 }
 
 .modal {
   border-radius: 8px;
   position: absolute;
-  border: 1px solid #1e2d3d;
-  background: #011627;
+  border: 1px solid var(--dark-navy);
+  background: var(--ocean-depth);
   width: 92vw;
-  height: 95.5vh;
+  height: 95.8vh;
   display: flex;
   flex-direction: column;
 }
@@ -25,11 +25,11 @@
   display: flex;
   align-items: center;
   padding: 18px;
-  border-bottom: 1px solid #1e2d3d;
+  border-bottom: 1px solid var(--dark-navy);
 }
 
 .logo {
-  color: #607b96;
+  color: var(--steel-blue);
   font-size: 16px;
   font-weight: 450;
 }
@@ -40,12 +40,12 @@
 }
 
 .svg {
-  fill: #607b96;
+  fill: var(--steel-blue);
 }
 
 .item {
   padding: 17px 18px;
-  border-bottom: 1px solid #1e2d3d;
+  border-bottom: 1px solid var(--dark-navy);
 }
 
 .page {
@@ -65,11 +65,13 @@
   pointer-events: none;
 }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .backdrop {
-    padding: calc((15 / 765) * 100vw);
+    padding: 28px;
   }
+
   .modal {
-    width: 96vw;
+    width: 93vw;
+    height: 92vh;
   }
 }

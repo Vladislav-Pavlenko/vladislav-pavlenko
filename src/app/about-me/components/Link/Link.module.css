@@ -5,10 +5,10 @@
   font-family: inherit;
   font-size: 16px;
   font-weight: 300;
-  color: #607b96;
+  color: var(--steel-blue);
   transition: all 250ms ease-in-out;
   &:hover {
-    color: #ffffff;
+    color: var(--foreground);
   }
 }
 

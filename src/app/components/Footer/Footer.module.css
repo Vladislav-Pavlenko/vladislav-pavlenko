@@ -1,13 +1,13 @@
 .footer {
   display: flex;
-  border-top: 1px solid #1e2d3d;
+  border-top: 1px solid var(--dark-navy);
   margin-top: auto;
 }
 
 .p {
   padding: 13px 18px 15px;
   text-align: start;
-  color: #607b96;
+  color: var(--steel-blue);
   font-size: 16px;
   font-weight: 450;
   width: 46.5vw;
@@ -19,7 +19,7 @@
 }
 
 .soc_item {
-  border-left: 1px solid #1e2d3d;
+  border-left: 1px solid var(--dark-navy);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,14 +33,14 @@
 
 .soc_link:hover .soc_icon,
 .soc_link:focus .soc_icon {
-  fill: #607b96;
+  fill: var(--steel-blue);
 }
 
 .foooter_username {
   display: none;
 }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .p {
     padding: 0;
     display: flex;
@@ -48,7 +48,7 @@
     align-items: center;
     width: 148px;
     height: 50px;
-    border-right: 1px solid #1e2d3d;
+    border-right: 1px solid var(--dark-navy);
   }
 
   .soc_list {
@@ -57,7 +57,7 @@
 
   .soc_item:not(:last-child) {
     border-left: none;
-    border-right: 1px solid #1e2d3d;
+    border-right: 1px solid var(--dark-navy);
     width: 8vw;
   }
 
@@ -68,7 +68,7 @@
   }
 
   .soc_item:last-child .soc_icon {
-    fill: #607b96;
+    fill: var(--steel-blue);
   }
 
   .soc_link {
@@ -82,7 +82,7 @@
 
   .foooter_username {
     display: inline;
-    color: #607b96;
+    color: var(--steel-blue);
     font-weight: 450;
     font-size: 16px;
   }

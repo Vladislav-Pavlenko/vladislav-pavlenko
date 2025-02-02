@@ -5,7 +5,7 @@ export const fetchSnippets = createAsyncThunk(
   "snippets/fetchSnippets",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get("api/snippets/get-snippets");
+      const response = await axios.get("api/snippets");
       return response.data;
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -20,10 +20,7 @@ export const updateSnippetStars = createAsyncThunk(
   "snippets/updateSnippetStars",
   async ({ id, stars }: { id: string; stars: number }, { rejectWithValue }) => {
     try {
-      const response = await axios.patch(
-        `api/snippets/update-snippet?id=${id}`,
-        { stars }
-      );
+      const response = await axios.patch(`api/snippets?id=${id}`, { stars });
       return response.data;
     } catch (error) {
       if (axios.isAxiosError(error)) {

@@ -1,10 +1,7 @@
-.li {
-}
-
 .title {
   font-size: 16px;
   font-weight: 450;
-  color: #607b96;
+  color: var(--steel-blue);
   margin-bottom: 15px;
 }
 
@@ -17,13 +14,13 @@
 .container {
   position: relative;
   border-radius: 15px;
-  border: 1px solid #1e2d3d;
-  background-color: #011221;
+  border: 1px solid var(--dark-navy);
+  background-color: var(--dark-teal);
 }
 
 .img {
   border-radius: 15px 15px 0px 0px;
-  border-bottom: 1px solid #1e2d3d;
+  border-bottom: 1px solid var(--dark-navy);
 }
 
 .icon_ul {
@@ -44,11 +41,11 @@
 }
 
 .icon {
-  fill: #011221;
+  fill: var(--dark-teal);
 }
 
 .description {
-  color: #607b96;
+  color: var(--steel-blue);
   font-size: 16px;
   font-weight: 450;
   margin: 29px 31px 23px;
@@ -62,14 +59,14 @@
   border-radius: 8px;
   border: 1px solid transparent;
   background: #1c2b3a;
-  color: #607b96;
+  color: var(--steel-blue);
   padding: 10px 14px;
   display: inline-flex;
   transition: all 300ms ease-in-out;
   &:hover,
   &:focus {
-    border: 1px solid #607b96;
-    color: #fff;
+    border: 1px solid var(--steel-blue);
+    color: var(--foreground);
   }
 }
 

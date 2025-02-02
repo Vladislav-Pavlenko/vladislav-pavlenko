@@ -30,7 +30,7 @@ export default function ProjectsList() {
       </h2>
       {isLoading && <Loader />}
       {error ? (
-        <p>{"/ :("} Sorry, I couldn`t find any projects</p>
+        <p className={styles.error}>{"/ :("} Sorry, I couldn`t find any projects</p>
       ) : (
         <ul className={styles.list}>
           {projects.map((item: Project, index: number) => {
