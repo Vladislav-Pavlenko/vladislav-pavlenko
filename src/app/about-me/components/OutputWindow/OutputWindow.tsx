@@ -17,7 +17,9 @@ export default function OutputWindow() {
     <section className={styles.section}>
       {error && <Error error={error} />}
       {isLoading ? (
-        <Loader />
+        <div className={styles.loader}>
+          <Loader />
+        </div>
       ) : (
         <>
           <h2 className={styles?.path}>

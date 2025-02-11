@@ -1,7 +1,7 @@
 import Image from "next/image.js";
 import { TimeAgo } from "../TimeAgo/TimeAgo";
 import styles from "./Snippet.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import clsx from "clsx";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/app/redux/store";
@@ -15,14 +15,23 @@ interface SnippetProps {
     details: string;
   };
 }
+
 export default function Snippet({ snippet }: SnippetProps) {
+  const dispatch = useDispatch<AppDispatch>();
+
+  const storedStars = localStorage.getItem(`stars-${snippet.id}`);
+  const storedLiked = localStorage.getItem(`liked-${snippet.id}`) === "true";
+
   const [visible, setVisible] = useState(false);
   const [star, setStar] = useState({
-    stars: snippet?.stars,
-    liked: false,
+    stars: storedStars ? parseInt(storedStars, 10) : snippet.stars,
+    liked: storedLiked,
   });
 
-  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    localStorage.setItem(`stars-${snippet.id}`, star.stars.toString());
+    localStorage.setItem(`liked-${snippet.id}`, star.liked.toString());
+  });
 
   const changeVisible = () => {
     setVisible(!visible);
@@ -34,15 +43,12 @@ export default function Snippet({ snippet }: SnippetProps) {
       stars: newStars,
       liked: !star.liked,
     });
-    dispatch(
-      updateSnippetStars({
-        id: snippet.id,
-        stars: newStars,
-      })
-    );
+
+    dispatch(updateSnippetStars({ id: snippet.id, stars: newStars }));
   };
 
   const date = new Date("2024-12-15");
+
   return (
     <>
       <div className={styles.container}>
@@ -65,12 +71,14 @@ export default function Snippet({ snippet }: SnippetProps) {
             <TimeAgo date={date} />
           </p>
         </div>
+
         <button className={styles.btn} type="button" onClick={changeVisible}>
           <svg className={styles.icon} width={18} height={18}>
             <use href="/images/icons.svg#icon-comment"></use>
           </svg>
           details
         </button>
+
         <button className={styles.btn_star} type="button" onClick={changeStar}>
           <svg
             className={clsx(styles.icon_star, star.liked && styles.liked)}
@@ -89,6 +97,7 @@ export default function Snippet({ snippet }: SnippetProps) {
           __html: snippet?.snippet,
         }}
       />
+
       <div className={clsx(styles.details_modal, visible && styles.open)}>
         <p className={styles.details_message}>{snippet?.details}</p>
         <button

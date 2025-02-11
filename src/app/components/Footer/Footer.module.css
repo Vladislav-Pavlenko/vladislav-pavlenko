@@ -32,7 +32,7 @@
 }
 
 .soc_link:hover .soc_icon,
-.soc_link:focus .soc_icon {
+.soc_link:focus-visible .soc_icon {
   fill: var(--steel-blue);
 }
 
