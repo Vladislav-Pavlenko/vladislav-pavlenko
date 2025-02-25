@@ -33,7 +33,7 @@ export default function ContactMe() {
           <ContactList name="find-me-also-in">
             <Link
               iconName="instagram"
-              link="https://www.instagram.com/ramin_svv/profilecard/?igsh=MTd5aHltZnA3bGw1YQ=="
+              link="https://www.instagram.com/pavlenko_vladislav/"
             >
               Instagram-accaunt
             </Link>
